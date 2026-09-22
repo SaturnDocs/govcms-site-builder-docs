@@ -1,41 +1,84 @@
-# GovCMS Site Building Training Manual
+# GovCMS Site Building Training Manual site
 
-[![CC BY-SA 3.0](https://camo.githubusercontent.com/54f85ff154017b9f86a8882c3469d7dfcab63442ae40f2ec49b7bbffede2d475/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f4c6963656e73652d434325323042592d2d5341253230332e3025323041552d6c69676874677265792e737667)](https://creativecommons.org/licenses/by-sa/3.0/au/)
+This public repository publishes the GovCMS Site Building Training Manual on
+SaturnDocs at <https://govcms-site-builder.saturndocs.net>.
 
-![GovCMS Logo](.gitbook/assets/govcms-logo.png) ![Salsa Digital Logo](.gitbook/assets/salsa-logo.png)
+The manual originates from the public [`govcms-training/site-
+builder`](https://github.com/govcms-training/site-builder) repository, a
+GitBook export by Salsa Digital. This repository is a GitHub fork of it. The
+complete upstream tree is preserved under `sources/upstream/`, and the fork's
+history before the SaturnDocs restructure is the upstream history. The Creative
+Commons Attribution-ShareAlike 3.0 Australia license from the upstream
+repository is preserved as `LICENSE.md` and applies to this adaptation.
 
-This manual is aimed at developers familiar with Drupal and/or other web content management systems \(CMSs\) who want to build or extend a GovCMS SaaS website. You should have skills in basic HTML, CSS, some Twig and basic PHP.
+## Repository layout
 
-Public URL: [https://salsa-digital.gitbook.io/govcms-site-builder](https://salsa-digital.gitbook.io/govcms-site-builder/)  GitHub URL: [https://github.com/govcms-training/site-builder](https://github.com/govcms-training/site-builder)
+- `sources/upstream/` is the immutable source snapshot used for this import.
+- `sources/adapted/` contains the reviewed static landing page, built from
+  copy in the upstream `README.md`, `SUMMARY.md`, and `contributing.md`.
+- `brand/` contains the original page-layout logo and favicon created for the
+  SaturnDocs site.
+- `site/` is the SaturnDocs source root connected to production.
+- `scripts/import-upstream.mjs` performs the documented, mechanical format
+  conversion required by the SaturnDocs source contract.
+- `scripts/verify-content.mjs` verifies source digests, generated pages,
+  navigation coverage, image references, and published asset equality.
 
-## What you will learn
+The importer publishes the pages that the upstream `SUMMARY.md` lists, in its
+order, and records every other upstream Markdown file in the manifest as
+unpublished. GitBook never served those files. The upstream sections become
+sidebar groups. The SaturnDocs sidebar renders a group's pages before its
+nested groups, so the exercises nested under a page in `SUMMARY.md` are listed
+flat, in the upstream order, rather than as nested groups. The manifest keeps
+the upstream nesting.
 
-In this training manual, you will learn how to:
+For each page the importer moves the leading level-one heading into SaturnDocs
+page-title metadata, converts GitBook hint blocks to callouts, converts GitBook
+figures to the Frame component, converts side-by-side image tables to Columns
+of Frames, unwraps the paragraph tags GitBook writes into table cells, resolves
+source-relative documentation links to their canonical SaturnDocs routes,
+removes the backslash escapes GitBook writes into URLs, turns each bare URL
+into an explicit link, and escapes braces in prose. When the `SUMMARY.md` label
+differs from the page heading, the label is preserved as an explicit navigation
+label. It does not rewrite documentation prose.
 
-1. Extend default functionality in GovCMS to meet advanced functional requirements
-2. Show best practices for GovCMS site building
-3. Configure both controlled vocabularies and free tagging with Taxonomy
-4. Manage navigation through the GovCMS menu system
-5. Use URL path configuration to improve your site’s search
-6. Configure automatically generated images and thumbnails
-7. Create advanced listings of content
-8. Maintain a secure and well-performing website
+GitBook asset names carry spaces and parenthesised duplicate counters, which
+the source contract does not admit. The importer publishes each referenced
+asset under a canonical name (`image (39).png` becomes `image-39.png`) and
+refuses to run if two names collide. Unreferenced assets stay in the snapshot
+and are not published.
 
-This manual also includes challenge exercises, which are designed for those who have additional time or who want to know more about a particular feature.
+The upstream root `README.md` has no path of its own in GitBook, so it is
+published at `/docs/introduction`. Three literal source repairs are recorded in
+the manifest as `sourceCorrections` with their reasons: a link whose target
+GitBook lost, an image whose alt text spans a blank line, and a license badge
+served through GitHub's image proxy, which refuses requests from other sites.
+The upstream text is otherwise reproduced as written, including its
+typographical errors.
 
-## Contributing & Feedback
+## Verify the import
 
-We’re continually working on improving these documents with community input and we appreciate any feedback, whether it's helping to contribute to further documentation or code, grammar issues, or simply a suggestion or improvement! Please refer to the [Contributing guide](contributing.md) for more guidance on this topic.
+```sh
+npm test
+```
 
-Alternatively you can also provide any feedback by emailing **[govcms.training@salsadigital.com.au](mailto:govcms.training@salsadigital.com.au).**
+To rebuild the generated SaturnDocs pages from the preserved source snapshot:
 
-## License
+```sh
+npm run import
+```
 
-[![CC BY-SA 3.0](https://camo.githubusercontent.com/54f85ff154017b9f86a8882c3469d7dfcab63442ae40f2ec49b7bbffede2d475/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f4c6963656e73652d434325323042592d2d5341253230332e3025323041552d6c69676874677265792e737667)](https://creativecommons.org/licenses/by-sa/3.0/au/)
+The SaturnDocs platform repository is required only for source-contract
+validation and the production renderer build. With the platform checked out and
+built beside this repository, run:
 
-This work is licensed under a [Creative Commons Attribution-ShareAlike 3.0 Australia License \(CC BY-SA 3.0 AU\)](https://creativecommons.org/licenses/by-sa/3.0/au/).
+```sh
+node scripts/validate-source.mjs
+SATURNDOCS_DOCS_DIR="$PWD/site" \
+SATURNDOCS_OUT_DIR="$PWD/build" \
+SATURNDOCS_WORKER_DIR="$PWD/worker" \
+pnpm --dir ../saturndocs-platform/renderer build
+node scripts/verify-build.mjs
+```
 
-> This manual has been created for the GovCMS Site Builder course. The manual uses a combination of content from drupal.org, adapted content from drupal.org and content we’ve written specifically for the GovCMS Site Builder course. Re-used and adapted content is in accordance with the [Creative Commons License, Attribution-ShareAlike 2.0 \(CC BY-SA 2.0\)](https://creativecommons.org/licenses/by-sa/2.0/).
-
-[![](https://licensebuttons.net/l/by-sa/4.0/88x31.png)](https://creativecommons.org/licenses/by-sa/3.0/au/)
-
+Set `SATURNDOCS_PLATFORM_DIR` when the platform checkout is elsewhere.

@@ -1,0 +1,247 @@
+{
+  "name": "GovCMS Site Builder",
+  "description": "GovCMS Site Building Training Manual",
+  "type": "docs",
+  "theme": "default",
+  "appearance": {
+    "default": "system"
+  },
+  "siteUrl": "https://govcms-site-builder.saturndocs.net",
+  "colors": {
+    "primary": "#1d5fa8"
+  },
+  "logo": "/img/govcms-site-builder-logo.svg",
+  "favicon": "/img/govcms-site-builder-favicon.svg",
+  "header": {
+    "showName": true
+  },
+  "social": [
+    {
+      "icon": "github",
+      "label": "GitHub",
+      "href": "https://github.com/govcms-training/site-builder"
+    }
+  ],
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Home",
+        "groups": [
+          {
+            "group": "Home",
+            "pages": [
+              "index"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Manual",
+        "groups": [
+          {
+            "group": "About this manual",
+            "pages": [
+              {
+                "page": "docs/introduction",
+                "label": "GovCMS8 Site Building Training Manual"
+              },
+              "docs/contributing",
+              "docs/software-and-module-requirements"
+            ]
+          },
+          {
+            "group": "UNIT 1: FUNCTIONAL ANALYSIS",
+            "pages": [
+              "docs/unit-1-functional-analysis/functional-analysis",
+              "docs/unit-1-functional-analysis/layout-of-a-govcms-page",
+              "docs/unit-1-functional-analysis/regions-in-govcms",
+              "docs/unit-1-functional-analysis/1.3-planning-your-site",
+              "docs/unit-1-functional-analysis/about-our-client",
+              "docs/unit-1-functional-analysis/understanding-requirements",
+              "docs/unit-1-functional-analysis/audience-analysis",
+              "docs/unit-1-functional-analysis/user-visitor-personas",
+              "docs/unit-1-functional-analysis/define-user-stories",
+              "docs/unit-1-functional-analysis/roles-and-permissions",
+              {
+                "page": "docs/unit-1-functional-analysis/exercise-1-2-configure-account-settings",
+                "label": "Exercise 1.1: Configure account settings"
+              },
+              "docs/unit-1-functional-analysis/blocks-in-govcms",
+              "docs/unit-1-functional-analysis/ex-1-3-place-welcome-message-block",
+              "docs/unit-1-functional-analysis/1.6-site-navigation",
+              "docs/unit-1-functional-analysis/footers",
+              "docs/unit-1-functional-analysis/exercise-1.4-build-the-related-links-menu",
+              "docs/unit-1-functional-analysis/exercice-1.5-assign-the-related-links-menu-block-to-a-region",
+              "docs/unit-1-functional-analysis/exercise-1-6-configure-the-related-links-menu-block",
+              {
+                "page": "docs/unit-1-functional-analysis/exercice-1-7-rearrange-the-main-menu",
+                "label": "Exercise 1.7: Rearrange the main menu"
+              },
+              "docs/unit-1-functional-analysis/theme-settings",
+              "docs/unit-1-functional-analysis/exercise-1-8-change-the-logo",
+              "docs/unit-1-functional-analysis/exercise-1-9-create-a-friendly-error-page",
+              "docs/unit-1-functional-analysis/unit-1-summary"
+            ]
+          },
+          {
+            "group": "UNIT 2: DESIGNING AND PLANNING CONTENT",
+            "pages": [
+              "docs/unit-2-designing-and-planning-content/designing-and-planning-content",
+              "docs/unit-2-designing-and-planning-content/Exercise-2-1-Compare-content-types-out-of-the-box",
+              "docs/unit-2-designing-and-planning-content/2.2-planning-your-site-structure",
+              "docs/unit-2-designing-and-planning-content/planning-data-entry-and-display",
+              "docs/unit-2-designing-and-planning-content/discussion",
+              "docs/unit-2-designing-and-planning-content/exercise-2-2-design-a-content-type-in-minutes",
+              "docs/unit-2-designing-and-planning-content/exercise-2-3-create-a-content-type",
+              "docs/unit-2-designing-and-planning-content/add-and-configure-fields",
+              "docs/unit-2-designing-and-planning-content/exercise-2-5-modify-an-existing-field",
+              "docs/unit-2-designing-and-planning-content/exercise-2-6-Add-custom-text-field",
+              "docs/unit-2-designing-and-planning-content/exercise-2-7-review-the-field-list-report",
+              "docs/unit-2-designing-and-planning-content/manage-form-display",
+              "docs/unit-2-designing-and-planning-content/exercise-2-8-testing-content-types",
+              "docs/unit-2-designing-and-planning-content/unit-2-summary"
+            ]
+          },
+          {
+            "group": "UNIT 3: MANAGE MEDIA",
+            "pages": [
+              "docs/unit-3-manage-media/manage-media",
+              "docs/unit-3-manage-media/customise-image-display-with-image-styles",
+              "docs/unit-3-manage-media/review-configuration-of-image-media-display",
+              "docs/unit-3-manage-media/exercise-3-1-example-use-of-image-styles",
+              "docs/unit-3-manage-media/exercise-3-2-add-and-configure-a-media-field",
+              "docs/unit-3-manage-media/exercise-3-3-challenge-change-image-size",
+              "docs/unit-3-manage-media/unit-3-summary"
+            ]
+          },
+          {
+            "group": "UNIT 4: TAXONOMY - CATEGORISING CONTENT",
+            "pages": [
+              "docs/unit-4-taxonomy-categorising-content/taxonomy-categorising-content",
+              "docs/unit-4-taxonomy-categorising-content/exercise-4-1-add-new-vocabulary",
+              "docs/unit-4-taxonomy-categorising-content/exercise-4-2-add-taxonomy-field-to-content-types",
+              "docs/unit-4-taxonomy-categorising-content/about-input-options",
+              "docs/unit-4-taxonomy-categorising-content/exercise-4-3-add-fields-to-content-types",
+              "docs/unit-4-taxonomy-categorising-content/exercise-4-4-test-the-new-vocuabulary",
+              "docs/unit-4-taxonomy-categorising-content/editorial-considerations",
+              "docs/unit-4-taxonomy-categorising-content/prepare-documentation-for-new-staff-onboarding",
+              "docs/unit-4-taxonomy-categorising-content/content-creation-forms",
+              "docs/unit-4-taxonomy-categorising-content/unit-4-summary"
+            ]
+          },
+          {
+            "group": "UNIT 5: TEXT FORMATS AND RICH TEXT",
+            "pages": [
+              "docs/unit-5-text-formats-and-rich-text/text-formats-and-rich-text",
+              "docs/unit-5-text-formats-and-rich-text/exercise-5-1-set-up-the-rich-text-editor",
+              "docs/unit-5-text-formats-and-rich-text/exercise-5-2-create-a-new-text-format",
+              "docs/unit-5-text-formats-and-rich-text/about-the-cross-site-scripting",
+              "docs/unit-5-text-formats-and-rich-text/untitled",
+              "docs/unit-5-text-formats-and-rich-text/unit-5-summary"
+            ]
+          },
+          {
+            "group": "UNIT 6: CONTENT LISTING WITH VIEWS",
+            "pages": [
+              "docs/unit-6-content-listing-with-views/content-listing-with-views",
+              "docs/unit-6-content-listing-with-views/exercise-6-1-build-the-employment-news-view",
+              "docs/unit-6-content-listing-with-views/views-part-two",
+              "docs/unit-6-content-listing-with-views/exercise-6-3-customised-news-and-media-page",
+              {
+                "page": "docs/unit-6-content-listing-with-views/exercise-6-4-reuse-a-views-template",
+                "label": "Exercise 6.4: Reuse a Views template"
+              },
+              "docs/unit-6-content-listing-with-views/related-content-by-term",
+              "docs/unit-6-content-listing-with-views/exercise-6-5-make-a-list-of-states-territories-block",
+              "docs/unit-6-content-listing-with-views/exercise-6-6-build-the-related-content-block",
+              "docs/unit-6-content-listing-with-views/exercice-6.7-configure-data-field-and-event-content-type",
+              "docs/unit-6-content-listing-with-views/exercise-6-8-extend-content-type",
+              "docs/unit-6-content-listing-with-views/exercise-6-9-modify-an-event-listing-for-future-dates",
+              "docs/unit-6-content-listing-with-views/customize-the-content-administration-experience",
+              "docs/unit-6-content-listing-with-views/exercise-6-10-administration-with-view-bulk-operations",
+              "docs/unit-6-content-listing-with-views/unit-6-summary"
+            ]
+          },
+          {
+            "group": "UNIT 7: URL ALIASES",
+            "pages": [
+              "docs/unit-7-url-aliases/url-aliases",
+              "docs/unit-7-url-aliases/exercise-7-1-url-aliases-patterns",
+              "docs/unit-7-url-aliases/url-redirects",
+              "docs/unit-7-url-aliases/exercise-7-2-configure-redirects",
+              "docs/unit-7-url-aliases/exercise-7-3-breadcrumbs",
+              "docs/unit-7-url-aliases/menu-check",
+              "docs/unit-7-url-aliases/unit-7-summary"
+            ]
+          },
+          {
+            "group": "UNIT 8: SITE BUILDING EXERCISES",
+            "pages": [
+              "docs/unit-8-site-building-exercises/site-building-exercices-workshop",
+              "docs/unit-8-site-building-exercises/extend-content-types-with-new-fields",
+              "docs/unit-8-site-building-exercises/exercise-8-1-add-an-external-link-field",
+              "docs/unit-8-site-building-exercises/agency-reference-link",
+              "docs/unit-8-site-building-exercises/exercise-8-2-create-agency-references",
+              "docs/unit-8-site-building-exercises/job-list-dropdown-filter",
+              "docs/unit-8-site-building-exercises/exercise-8-3-configure-the-job-listing",
+              "docs/unit-8-site-building-exercises/exercise-8-4-agency-logo-in-job-posting-view",
+              "docs/unit-8-site-building-exercises/exercise-8.5-challenge-exercises",
+              "docs/unit-8-site-building-exercises/discussion",
+              "docs/unit-8-site-building-exercises/views-contextual-filters",
+              "docs/unit-8-site-building-exercises/exercise-8-6-add-about-author-block-to-news-article",
+              "docs/unit-8-site-building-exercises/further-discussion-and-exercices",
+              "docs/unit-8-site-building-exercises/employee-list-and-custom-profiles",
+              "docs/unit-8-site-building-exercises/exercise-8-7-set-up-profile-fields",
+              "docs/unit-8-site-building-exercises/exercise-8-8-create-the-list-of-users",
+              "docs/unit-8-site-building-exercises/exercise-8-9-edit-the-existing-view-to-filter-out-roles",
+              "docs/unit-8-site-building-exercises/exercise-8-10-create-a-custom-layout",
+              "docs/unit-8-site-building-exercises/exercise-8-11-an-image-gallery",
+              "docs/unit-8-site-building-exercises/unit-summary",
+              "docs/unit-8-site-building-exercises/discussion-1"
+            ]
+          },
+          {
+            "group": "UNIT 9: SEARCH AND RELATED CONTENT",
+            "pages": [
+              "docs/unit-9-search-and-related-content/search-and-related-content",
+              "docs/unit-9-search-and-related-content/exercise-9-1-explore-the-default-search",
+              "docs/unit-9-search-and-related-content/exercise-9-2-set-up-job-posting-content-type-display-in-global-search",
+              "docs/unit-9-search-and-related-content/exercice-9.3-create-new-search-page-with-search-api",
+              "docs/unit-9-search-and-related-content/exercise-9-4-add-fields-to-the-index",
+              "docs/unit-9-search-and-related-content/exercise-9-5-extend-the-search-with-facets",
+              "docs/unit-9-search-and-related-content/unit-summary"
+            ]
+          },
+          {
+            "group": "UNIT 10: SITE PERFORMANCE",
+            "pages": [
+              "docs/unit-10-site-performance/unit-10-site-performance",
+              "docs/unit-10-site-performance/planning-for-peformance",
+              "docs/unit-10-site-performance/define-goals-and-requirements",
+              "docs/unit-10-site-performance/review-current-issues-and-bottlenecks",
+              "docs/unit-10-site-performance/other-performance-considerations",
+              "docs/unit-10-site-performance/unit-10-summary",
+              "docs/unit-10-site-performance/glossary-of-terms",
+              "docs/unit-10-site-performance/appendices"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "footer": {
+    "text": "Content by Salsa Digital and contributors. Licensed under CC BY-SA 3.0 AU."
+  },
+  "ai": {
+    "assistant": true,
+    "graphEnrichment": false,
+    "home": false
+  },
+  "redirects": [
+    {
+      "source": "/docs",
+      "destination": "/docs/introduction",
+      "permanent": true
+    }
+  ]
+}

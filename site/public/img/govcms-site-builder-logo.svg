@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title">
+  <title id="title">GovCMS Site Building Training Manual</title>
+  <g fill="none" stroke="#1D5FA8" stroke-width="4" stroke-linejoin="round">
+    <rect x="8" y="8" width="48" height="48" rx="8"/>
+    <path d="M8 22h48"/>
+    <path d="M26 22v34"/>
+  </g>
+  <g fill="#1D5FA8">
+    <rect x="14" y="13" width="14" height="4" rx="2"/>
+    <rect x="32" y="28" width="18" height="4" rx="2"/>
+    <rect x="32" y="37" width="18" height="4" rx="2"/>
+    <rect x="32" y="46" width="12" height="4" rx="2"/>
+  </g>
+</svg>
