@@ -7,7 +7,7 @@
   "adaptedPageCount": 1,
   "unpublishedPageCount": 39,
   "assetCount": 974,
-  "publishedAssetCount": 288,
+  "publishedAssetCount": 290,
   "navigation": [
     {
       "group": "About this manual",
@@ -1769,8 +1769,8 @@
       "navigationRoute": "index",
       "title": "GovCMS Site Building Training Manual",
       "navigation": true,
-      "sourceSha256": "5c58a3ca80646c65ebc32386e22535fa5f0f23c55b263bf8920ca9e0d38e6277",
-      "generatedSha256": "5c58a3ca80646c65ebc32386e22535fa5f0f23c55b263bf8920ca9e0d38e6277"
+      "sourceSha256": "1833c56675578973c561cac27d75252083b10674eb301c384755e113475ed32f",
+      "generatedSha256": "1833c56675578973c561cac27d75252083b10674eb301c384755e113475ed32f"
     }
   ],
   "adaptationInputs": [
@@ -8697,6 +8697,12 @@
   ],
   "brandAssets": [
     {
+      "source": "brand/govcms-logo.svg",
+      "output": "site/public/img/govcms-logo.svg",
+      "sha256": "c2b061be75a401bb79ff964599b276485603f43a1cb613ca8149c9d38d38e989",
+      "size": 11333
+    },
+    {
       "source": "brand/govcms-site-builder-favicon.svg",
       "output": "site/public/img/govcms-site-builder-favicon.svg",
       "sha256": "8df00ec5c0c2b082dbf131fae9f32c80ca65d1479b387198849d77a0a2a1847a",
@@ -8707,6 +8713,12 @@
       "output": "site/public/img/govcms-site-builder-logo.svg",
       "sha256": "25003ebd9804c9e66f39216c64173874c3a6fd699100d0090a37af73e45124eb",
       "size": 604
+    },
+    {
+      "source": "brand/salsa-digital-logo.svg",
+      "output": "site/public/img/salsa-digital-logo.svg",
+      "sha256": "67b6d7cb19a494b9cc6f32ab387e5e446daa78fba8f2e8c0b0d2071faf5f9c7b",
+      "size": 62726
     }
   ]
 }
