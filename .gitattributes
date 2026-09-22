@@ -1,1 +1,7 @@
 sources/upstream/** whitespace=-blank-at-eof
+# GitHub source archives feed the SaturnDocs ingest, which keeps only site/
+# and caps the archive at 256 MiB. The upstream assets alone exceed that.
+sources/ export-ignore
+brand/ export-ignore
+scripts/ export-ignore
+.github/ export-ignore
