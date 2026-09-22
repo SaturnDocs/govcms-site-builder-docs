@@ -56,6 +56,12 @@ served through GitHub's image proxy, which refuses requests from other sites.
 The upstream text is otherwise reproduced as written, including its
 typographical errors.
 
+GitHub source archives of this repository omit `sources/`, `brand/`,
+`scripts/`, and `.github/` through `export-ignore` in `.gitattributes`. The
+SaturnDocs ingest reads only `site/` from the archive and refuses archives over
+256 MiB, which the upstream assets alone exceed. A git clone still holds
+everything.
+
 ## Verify the import
 
 ```sh
