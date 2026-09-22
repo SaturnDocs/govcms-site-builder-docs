@@ -1,0 +1,6 @@
+[models]
+synthesis = "qwen/qwen3.5-flash-02-23"
+
+[behavior]
+cache = true
+max_iterations = 4
