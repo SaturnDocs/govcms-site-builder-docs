@@ -345,6 +345,7 @@ function transformBody(body, relative, routeBySourcePath, referencedAssets) {
   }
   transformed = transformHints(transformed, relative);
   transformed = transformFigures(transformed, relative);
+  transformed = mapLines(transformed, transformImageRun);
   transformed = mapLines(transformed, (line) => {
     line = rewriteAssetReferences(line, relative, referencedAssets);
     line = rewriteInternalDocumentationLinks(line, relative, routeBySourcePath);
@@ -427,6 +428,24 @@ function transformFigures(source, relative) {
     .join("\n");
   if (/(^|[^\\])<(figure|figcaption|\/p|p)>/.test(transformed)) throw new Error(`${relative}: a figure did not match the expected GitBook shape`);
   return transformed;
+}
+
+// GitBook laid a paragraph of images out inline, side by side. Prose styling
+// gives each image its own line, so the run becomes Columns of Frames. The
+// light surface keeps the white page the images were drawn against: the
+// upstream GovCMS logo is black on transparent and is illegible on the dark
+// theme without it.
+function transformImageRun(line) {
+  const run = /^(\s*)((?:!\[[^\]]*\]\([^)\s]+\)\s*){2,})$/.exec(line);
+  if (!run) return line;
+  const indent = run[1];
+  const images = [...run[2].matchAll(/!\[([^\]]*)\]\(([^)\s]+)\)/g)];
+  const output = [`${indent}<Columns cols={${images.length}}>`];
+  for (const [, alt, src] of images) {
+    output.push(`${indent}  <Frame surface="light"><img src="${src}" alt="${escapeAttribute(alt)}" /></Frame>`);
+  }
+  output.push(`${indent}</Columns>`);
+  return output.join("\n");
 }
 
 // GitBook places images side by side as a header-only table whose cells each

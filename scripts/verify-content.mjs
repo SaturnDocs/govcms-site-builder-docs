@@ -334,7 +334,7 @@ function authoredLevelOneHeading(body) {
 function generatedTextPayload(source) {
   let body = stripFrontmatter(source);
   body = body
-    .replace(/<Frame(?: caption="([^"]*)")?><img src="[^"]*" alt="([^"]*)" \/><\/Frame>/g, (_match, caption, alt) => `${decodeAttribute(caption ?? "")} ${decodeAttribute(alt)}`)
+    .replace(/<Frame(?: caption="([^"]*)")?(?: surface="[a-z]+")?><img src="[^"]*" alt="([^"]*)" \/><\/Frame>/g, (_match, caption, alt) => `${decodeAttribute(caption ?? "")} ${decodeAttribute(alt)}`)
     .replace(/<img src="[^"]*" alt="([^"]*)" \/>/g, (_match, alt) => decodeAttribute(alt))
     .replace(/<\/?(?:Info|Check|Warning|Danger|Note|Tip|Columns)(?: cols=\{\d\})?>/g, "")
     .replace(/^\s*\|(?:\s*-+\s*\|)+\s*$/gm, "");
