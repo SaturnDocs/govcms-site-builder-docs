@@ -34,13 +34,14 @@ the upstream nesting.
 
 For each page the importer moves the leading level-one heading into SaturnDocs
 page-title metadata, converts GitBook hint blocks to callouts, converts GitBook
-figures to the Frame component, converts side-by-side image tables to Columns
-of Frames, unwraps the paragraph tags GitBook writes into table cells, resolves
-source-relative documentation links to their canonical SaturnDocs routes,
-removes the backslash escapes GitBook writes into URLs, turns each bare URL
-into an explicit link, and escapes braces in prose. When the `SUMMARY.md` label
-differs from the page heading, the label is preserved as an explicit navigation
-label. It does not rewrite documentation prose.
+figures to the Frame component, converts side-by-side image tables and inline
+runs of images to Columns of Frames on a light surface, unwraps the paragraph
+tags GitBook writes into table cells, resolves source-relative documentation
+links to their canonical SaturnDocs routes, removes the backslash escapes
+GitBook writes into URLs, turns each bare URL into an explicit link, and
+escapes braces in prose. When the `SUMMARY.md` label differs from the page
+heading, the label is preserved as an explicit navigation label. It does not
+rewrite documentation prose.
 
 GitBook asset names carry spaces and parenthesised duplicate counters, which
 the source contract does not admit. The importer publishes each referenced
